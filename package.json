@@ -15,11 +15,14 @@
   "bugs": {
     "url": "https://github.com/brentjanderson/pcnlint/issues"
   },
-  "bin": {},
+  "bin": {
+    "pcnlint": "./bin/pcnlint"
+  },
   "scripts": {},
-  "main": "./pcnlint.js",
+  "main": "./src/pcnlint.js",
   "dependencies": {
     "chai": "^1.10.0",
+    "get-stdin": "^3.0.2",
     "minimist": "^1.1.0"
   },
   "devDependencies": {},
@@ -30,5 +33,8 @@
     }
   ],
   "preferGlobal": true,
-  "files": []
+  "files": [
+    "bin",
+    "src"
+  ]
 }
