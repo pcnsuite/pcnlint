@@ -1,0 +1,34 @@
+{
+  "name": "pcnlint",
+  "version": "1.0.0",
+  "homepage": "http://github.com/brentjanderson/pcnlint",
+  "description": "Static analysis tool for PCN",
+  "author": {
+    "name": "Brent Anderson",
+    "email": "pcnlint@brentjanderson.com",
+    "url": "http://www.brentjanderson.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brentjanderson/pcnlint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brentjanderson/pcnlint/issues"
+  },
+  "bin": {},
+  "scripts": {},
+  "main": "./pcnlint.js",
+  "dependencies": {
+    "chai": "^1.10.0",
+    "minimist": "^1.1.0"
+  },
+  "devDependencies": {},
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/brentjanderson/pcnlint/blob/master/LICENSE"
+    }
+  ],
+  "preferGlobal": true,
+  "files": []
+}
