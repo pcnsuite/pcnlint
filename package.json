@@ -1,6 +1,6 @@
 {
   "name": "pcnlint",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "homepage": "http://github.com/brentjanderson/pcnlint",
   "description": "Static analysis tool for PCN",
   "author": {
@@ -11,7 +11,8 @@
   "keywords": [
     "pcn",
     "util",
-    "lint"
+    "lint",
+    "mocha"
   ],
   "repository": {
     "type": "git",
@@ -28,7 +29,8 @@
   "dependencies": {
     "chai": "^1.10.0",
     "get-stdin": "^3.0.2",
-    "minimist": "^1.1.0"
+    "minimist": "^1.1.0",
+    "mocha": "^2.0.1"
   },
   "devDependencies": {},
   "licenses": [
