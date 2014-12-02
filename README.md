@@ -6,16 +6,26 @@ PCN Linter is a validation tool that adheres to [PCN Spec 1.0](https://github.co
 
 ## Usage
 
-    node pcnlint.js examples/pizza-parlor.json
+    npm install -g pcnlint
 
-Pass a list of files to pcnlint to get back exceptions in each document's adherence to the spec.
+Then you can...
+
+    pcnlint pizza-parlor.json
+
+Or...
+
+    cat pizza-parlor.json | pcnlint
+
+When using file names as parameters, you can chain together multiple files to lint them all together.
 
 ## Todo
 
-[*] Get the PCN-Spec example to pass
-[ ] Get other PCN examples to pass
-[ ] Prettify error output
-[ ] Support input from `stdin`
+- [x] Get the PCN-Spec example to pass
+- [x] Support input from `stdin`
+- [ ] Get other PCN examples to pass
+- [ ] Prettify error output
+- [ ] Support recursive file input
+
 
 ## License
 This software is licensed under the MIT license. Copyright 2014 Brent Anderson.
