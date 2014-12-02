@@ -1,6 +1,6 @@
 {
   "name": "pcnlint",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "homepage": "http://github.com/brentjanderson/pcnlint",
   "description": "Static analysis tool for PCN",
   "author": {
@@ -8,6 +8,11 @@
     "email": "pcnlint@brentjanderson.com",
     "url": "http://www.brentjanderson.com/"
   },
+  "keywords": [
+    "pcn",
+    "util",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/brentjanderson/pcnlint.git"
@@ -35,6 +40,8 @@
   "preferGlobal": true,
   "files": [
     "bin",
-    "src"
+    "src",
+    "LICENSE",
+    "examples"
   ]
 }
