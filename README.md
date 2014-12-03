@@ -20,8 +20,8 @@ When using file names as parameters, you can chain together multiple files to li
 
 Or...
 
-   var pcnlint = require('pcnlint');
-   pcnlint.testDocument(jsonDoc, {reporter: 'json'});
+    var pcnlint = require('pcnlint');
+    pcnlint.testDocument(jsonDoc, {reporter: 'json'});
 
 ## Options
 
