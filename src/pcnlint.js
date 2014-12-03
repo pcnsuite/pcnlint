@@ -14,8 +14,7 @@
 
 		// Store data in environment variable
 		process.env.pcnlint_testcase = docData;
-
-		mocha.addFile('./src/mocha.js');
+		mocha.addFile(require.resolve('./mocha.js'));
 
 		mocha.run(function(failures){
 			process.on('exit', function () {
