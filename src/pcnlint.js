@@ -4,15 +4,16 @@
 	// Load PCN document from parameter
 	var fs			= require('fs'),
 		stdin 		= require('get-stdin'),
-		chai		= require('chai'),
-		expect		= chai.expect,
 		Mocha		= require('mocha');
 
+	/**
+	 * Test a document string, optionally providing parameters to mocha
+	 */
 	function testDocument(docData, mochaOpts) {
 		var mocha = new Mocha(mochaOpts);
 
-		// Write data to temporary file
-		fs.writeFileSync('testcase.json', docData);
+		// Store data in environment variable
+		process.env.pcnlint_testcase = docData;
 
 		mocha.addFile('./src/mocha.js');
 
@@ -23,10 +24,9 @@
 		});
 	}
 
-	function cleanup() {
-		fs.unlinkSync('testcase.json');
-	}
-
+	/**
+	 * Command-line runner, taking the process.argv parameter (or equivalent)
+	 */
 	function interpret(rawArgs) {
 		// Determine if we're using stdin or files
 		var argv = require('minimist')(rawArgs.slice(2));
@@ -47,11 +47,9 @@
 				var data = fs.readFileSync(argv._[i], 'utf8');
 				testDocument(data, mochaOpts);
 			}
-			cleanup();
 		} else { // Attempt to use STDIN
 			stdin(function(data) {
 				testDocument(data, mochaOpts);
-				cleanup();
 			});
 		}
 	}

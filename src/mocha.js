@@ -1,13 +1,14 @@
 var chai		= require('chai'),
 	expect		= chai.expect,
-	fs			= require('fs'),
-	docData		= fs.readFileSync('testcase.json', 'utf8'),
+	docData		= process.env.pcnlint_testcase,
 	doc;
 
+// Verify we have nothing after the decimal on a given value
 function noDecimals(v) {
 	return v % 1 === 0.0;
 }
 
+// Verify that a given property is one of a list of strings
 function stringMatch(stringValues) {
 	return function(testValue) {
 		for (var i = stringValues.length - 1; i >= 0; i--) {
@@ -19,6 +20,7 @@ function stringMatch(stringValues) {
 	};
 }
 
+// Verify that a given domain id is one of the domains in our document
 function domainExists(domains) {
 	// Verify the domain assigned exists
 	return function(domainId) {
@@ -31,6 +33,7 @@ function domainExists(domains) {
 	};
 }
 
+// Verify that a given step id is one of the steps in our document
 function stepExists(steps) {
 	return function(stepId) {
 		// Verify the step exists
@@ -43,7 +46,7 @@ function stepExists(steps) {
 	};
 }
 
-// Steps validation
+// Predecessor validation
 function predecessorTest(pred) {
 	return function() {
 		it('should have a property id that is a string and is a real step id', function() {
@@ -67,6 +70,7 @@ function predecessorTest(pred) {
 	};
 }
 
+// Step problem validation
 function stepProblemTest(problem) {
 	return function() {
 		it('should be an object', function() {
@@ -86,6 +90,7 @@ function stepProblemTest(problem) {
 	};
 }
 
+// Step validation
 function stepTest(step) {
 	return function() {
 		it('should be an object', function() {
@@ -191,7 +196,9 @@ function stepTest(step) {
 	};
 }
 
-// Document must be valid JSON
+// Start of tests
+
+// Validate PCN Document as a whole
 describe('PCN Document', function() {
 	it('must be valid JSON', function() {
 		expect(function() { JSON.parse(docData); }).to.not.throw(Error);
