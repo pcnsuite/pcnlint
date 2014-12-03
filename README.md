@@ -18,6 +18,11 @@ Or...
 
 When using file names as parameters, you can chain together multiple files to lint them all together.
 
+Or...
+
+   var pcnlint = require('pcnlint');
+   pcnlint.testDocument(jsonDoc, {reporter: 'json'});
+
 ## Options
 
 Currently pcnlint will take a list of files to lint (or it will read from stdin if no files are provided).
