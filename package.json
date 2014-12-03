@@ -1,6 +1,6 @@
 {
   "name": "pcnlint",
-  "version": "0.6.6",
+  "version": "0.6.8",
   "homepage": "http://github.com/brentjanderson/pcnlint",
   "description": "Static analysis tool for PCN",
   "author": {
