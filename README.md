@@ -2,7 +2,7 @@
 
 > Because PCN data can be rife with errors
 
-PCN Linter is a validation tool that adheres to [PCN Spec 1.0](https://github.com/mjswensen/pcn-spec).
+PCN Linter is a validation tool that adheres to [PCN Spec](https://github.com/pcnsuite/pcn-spec).
 
 ## Usage
 
